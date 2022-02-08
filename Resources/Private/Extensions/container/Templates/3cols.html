@@ -1,0 +1,29 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Main">
+    <div class="row">
+        <f:if condition="{childrenLeft}">
+            <div class="col-4 col-12-medium">
+                <f:for each="{childrenLeft}" as="child">
+                    <f:format.raw>{child.renderedContent}</f:format.raw>
+                </f:for>
+            </div>
+        </f:if>
+        <f:if condition="{childrenCenter}">
+            <div class="col-4 col-12-medium">
+                <f:for each="{childrenCenter}" as="child">
+                    <f:format.raw>{child.renderedContent}</f:format.raw>
+                </f:for>
+            </div>
+        </f:if>
+        <f:if condition="{childrenRight}">
+            <div class="col-4 col-12-medium">
+                <f:for each="{childrenRight}" as="child">
+                    <f:format.raw>{child.renderedContent}</f:format.raw>
+                </f:for>
+            </div>
+        </f:if>
+    </div>
+</f:section>
+
+</html>

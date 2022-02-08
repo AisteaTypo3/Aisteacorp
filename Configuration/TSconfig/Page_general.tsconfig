@@ -1,0 +1,43 @@
+TCEFORM {
+    tt_content {
+        header_layout {
+            altLabels {
+                1 = h1 - Seitenüberschrift
+                2 = h2 - Themenüberschrift
+                3 = h3 - Überschrift 3. Ordnung
+                4 = h4 - Überschrift 4. Ordnung
+                5 = h5 - Überschrift 5. Ordnung
+            }
+            removeItems = 5
+        }
+        frame_class {
+            addItems {
+                100 = Überschrift unterstrichen
+            }
+        }
+        table_class {
+            addItems {
+                alt = Alternativ
+            }
+            removeItems = striped,bordered
+        }
+        ## Workaround für responsive Videos in Verbindung mit fluid_styled_content default CSS
+        layout {
+            addItems {
+                10 = Responsive Video
+            }
+        }
+    }
+}
+
+## RTE Konfiguration
+#RTE.default.preset = myRtePreset
+RTE.default.preset = default
+#RTE.config.tt_content.bodytext.types.textmedia.preset = full
+#RTE.config.tt_content.bodytext.types.text.preset = minimal
+
+## Rechte für neue Seiten
+TCEMAIN.permissions {
+    group = show,editcontent,edit,new,delete
+    groupid = 1
+}

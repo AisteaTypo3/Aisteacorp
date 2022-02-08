@@ -1,0 +1,22 @@
+lib.contentElement {
+    partialRootPath >
+    partialRootPaths {
+      0 = EXT:fluid_styled_content/Resources/Private/Partials/
+      10 = {$styles.templates.partialRootPath}
+      99 = EXT:aisteacorp/Resources/Private/Overrides/hive_ovr_fluidstyledcontent/Partials/
+    }
+
+    templateRootPaths >
+    templateRootPaths {
+        0 = EXT:fluid_styled_content/Resources/Private/Templates/
+        10 = {$styles.templates.templateRootPath}
+        99 = EXT:aisteacorp/Resources/Private/Overrides/hive_ovr_fluidstyledcontent/Templates/
+    }
+
+    layoutRootPath >
+    layoutRootPaths {
+        0 = EXT:fluid_styled_content/Resources/Private/Layouts/
+        10 = {$styles.templates.layoutRootPath}
+        99 = EXT:aisteacorp/Resources/Private/Overrides/hive_ovr_fluidstyledcontent/Layouts/
+    }
+}

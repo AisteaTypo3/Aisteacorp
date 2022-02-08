@@ -1,0 +1,34 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<ul class="icons">
+    <f:if condition="{settings.socialmedia.twitter}">
+        <li>
+            <a href="https://www.twitter.com/{settings.socialmedia.twitter}" class="icon brands fa-twitter" target="_blank">
+                <span class="label">Twitter</span>
+            </a>
+        </li>
+    </f:if>
+    <f:if condition="{settings.socialmedia.facebook}">
+        <li>
+            <a href="{settings.socialmedia.facebook}" class="icon brands fa-facebook-f" target="_blank">
+                <span class="label">Facebook</span>
+            </a>
+        </li>
+    </f:if>
+    <f:if condition="{settings.socialmedia.instagram}">
+        <li>
+            <a href="https://www.instagram.com/{settings.socialmedia.instagram}" class="icon brands fa-instagram" target="_blank">
+                <span class="label">Instagram</span>
+            </a>
+        </li>
+    </f:if>
+    <f:if condition="{settings.socialmedia.github}">
+        <li>
+            <a href="https://github.com/{settings.socialmedia.github}" class="icon brands fa-github" target="_blank">
+                <span class="label">Github</span>
+            </a>
+        </li>
+    </f:if>
+</ul>
+
+</html>

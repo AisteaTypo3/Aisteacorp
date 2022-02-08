@@ -1,0 +1,13 @@
+plugin.tx_glossary2._LOCAL_LANG {
+    de {
+        all = Alle anzeigen
+        backToList = Zurück zur ganzen Liste der Glossar-Einträge
+    }
+    fr {
+        backToList = Retour à la liste complète des entrées du glossaire
+        all = Toutes les entrées
+    }
+    it {
+        
+    }
+}

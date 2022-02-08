@@ -1,0 +1,9 @@
+############################################
+#### BACKENDLAYOUTS EXT:aisteacorp ####
+############################################
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:aisteacorp/Resources/Private/BackendLayouts" extensions="txt">
+
+############################################
+####  PAGELAYOUTS EXT:aisteacorp   ####
+############################################
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:aisteacorp/Configuration/TsConfig/Page/Production" extensions="txt">

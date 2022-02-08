@@ -1,0 +1,76 @@
+# Load default processing options
+imports:
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+
+# Add configuration for the editor
+# For complete documentation see http://docs.ckeditor.com/#!/api/CKEDITOR.config
+# RTE Generator see https://ckeditor.com/latest/samples/index.html
+editor:
+  config:
+
+    #RTE styling
+    contentsCss: "EXT:hive_thm_custom/Resources/Public/Css/Backend/rte.css"
+
+    # keep tags,classes,styles
+    allowedContent: true
+
+    stylesSet:
+      - { name: "span", element: "span", attributes: { class: ""} }
+
+    format_tags: "p;h1;h2;h3;h4;h5"
+
+    toolbar:
+      - { name: clipboard, items: [ Cut, Copy, Paste, PasteText, PasteFromWord, -, Undo, Redo ] }
+      - { name: editing, items: [ Scayt ] }
+      - { name: basicstyles, items: [ Bold, Italic, Underline, Strike, Subscript, Superscript, -, CopyFormatting, RemoveFormat ] }
+      - { name: paragraph, items: [ NumberedList, BulletedList, -, Outdent, Indent, -, Blockquote, -, JustifyLeft, JustifyCenter, JustifyRight, JustifyBlock, - ] }
+      - { name: links, items: [ Link, Unlink, Anchor ] }
+      - { name: insert, items: [ Table, HorizontalRule, SpecialChar, PageBreak ] }
+      - { name: styles, items: [ Styles, Format, Font, FontSize ] }
+      - { name: colors, items: [ TextColor, BGColor ] }
+      - { name: tools, items: [ Maximize ] }
+      - { name: document, items: [ Source, - ] }
+
+    justifyClasses:
+      - text-start
+      - text-center
+      - text-end
+      - text-justify
+
+    #colorButton_colors: "FF0000,00FF00,0000FF"
+
+    extraPlugins:
+      - justify
+      #- colorbutton
+
+    removePlugins:
+      #- image
+
+    removeButtons:
+      - Save
+      - NewPage
+      - Preview
+      - Print
+      - Templates
+      - Image
+      - Flash
+      - Smiley
+      - Iframe
+      - BidiLtr
+      - BidiRtl
+      - Language
+      - CreateDiv
+      - Form
+      - Checkbox
+      - Radio
+      - TextField
+      - Textarea
+      - Select
+      - Button
+      - ImageButton
+      - HiddenField
+      - SelectAll
+      - Replace
+      - Find

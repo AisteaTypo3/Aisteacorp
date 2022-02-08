@@ -1,0 +1,68 @@
+page = PAGE
+
+page {
+    shortcutIcon = EXT:aisteacorp/Resources/Public/Icons/favicon.png
+    
+    meta {
+        viewport = width=device-width, initial-scale=1, user-scalable=no
+    }
+    
+    includeCSS {
+        main = EXT:aisteacorp/Resources/Public/Css/main.css
+        custom = EXT:aisteacorp/Resources/Public/Css/custom.css
+    }
+
+    includeJSFooter {
+        jquery = EXT:aisteacorp/Resources/Public/JavaScript/jquery.min.js
+        browser = EXT:aisteacorp/Resources/Public/JavaScript/browser.min.js
+        breakpoints = EXT:aisteacorp/Resources/Public/JavaScript/breakpoints.min.js
+        util = EXT:aisteacorp/Resources/Public/JavaScript/util.js
+        main = EXT:aisteacorp/Resources/Public/JavaScript/main.js
+        fslightbox = EXT:aisteacorp/Resources/Public/JavaScript/fslightbox.js
+    }
+
+    bodyTagAdd = class="is-preload"
+}
+
+page.10 = FLUIDTEMPLATE
+page.10 {
+    typeNum = 0
+    layoutRootPath = EXT:aisteacorp/Resources/Private/Layouts/
+    partialRootPath = EXT:aisteacorp/Resources/Private/Partials/
+    
+    file.stdWrap.cObject = CASE
+    file.stdWrap.cObject {
+        key.data = pagelayout
+
+        pagets__default = TEXT
+        pagets__default.value = EXT:aisteacorp/Resources/Private/Templates/CustomerHome.html
+
+        default < .pagets__default 
+    }
+
+    variables {
+        content0 < styles.content.get
+
+        content1 < styles.content.get
+        content1 {
+            select.where = colPos = 1
+            slide = -1
+            slide.collect = -1
+            slide.collectReverse = 1
+        }
+
+        content2 < styles.content.get
+        content2.select.where = colPos = 2
+    }
+
+    settings {
+        rootPageId = {$aisteacorp.rootPageId}
+        logoText = {$aisteacorp.logoText}
+        logoFile = {$aisteacorp.logoFile}
+        socialmedia.twitter = {$aisteacorp.socialmedia.twitter}
+        socialmedia.facebook = {$aisteacorp.socialmedia.facebook}
+        socialmedia.instagram = {$aisteacorp.socialmedia.instagram}
+        socialmedia.github = {$aisteacorp.socialmedia.github}
+        searchTargetPid = {$aisteacorp.searchTargetPid}
+    }
+}

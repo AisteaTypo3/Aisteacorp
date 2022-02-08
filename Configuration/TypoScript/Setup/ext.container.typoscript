@@ -1,0 +1,66 @@
+tt_content.1col < lib.contentElement
+tt_content.1col {
+  templateName = 1col
+  templateRootPaths.10 = EXT:aisteacorp/Resources/Private/Extensions/container/Templates/
+  dataProcessing {
+    101 = B13\Container\DataProcessing\ContainerProcessor
+    101 {
+      colPos = 101
+      as = children
+    }
+  }
+}
+
+tt_content.2cols < lib.contentElement
+tt_content.2cols {
+  templateName = 2cols
+  templateRootPaths.10 = EXT:aisteacorp/Resources/Private/Extensions/container/Templates/
+  dataProcessing {
+    201 = B13\Container\DataProcessing\ContainerProcessor
+    201 {
+      colPos = 201
+      as = childrenLeft
+    }
+    202 = B13\Container\DataProcessing\ContainerProcessor
+    202 {
+      colPos = 202
+      as = childrenRight
+    }
+  }
+}
+
+tt_content.3cols < lib.contentElement
+tt_content.3cols {
+  templateName = 3cols
+  templateRootPaths.10 = EXT:aisteacorp/Resources/Private/Extensions/container/Templates/
+  dataProcessing {
+    301 = B13\Container\DataProcessing\ContainerProcessor
+    301 {
+      colPos = 301
+      as = childrenLeft
+    }
+    302 = B13\Container\DataProcessing\ContainerProcessor
+    302 {
+      colPos = 302
+      as = childrenCenter
+    }
+    303 = B13\Container\DataProcessing\ContainerProcessor
+    303 {
+      colPos = 303
+      as = childrenRight
+    }
+  }
+}
+
+tt_content.accordion < lib.contentElement
+tt_content.accordion {
+  templateName = Accordion
+  templateRootPaths.10 = EXT:aisteacorp/Resources/Private/Extensions/container/Templates/
+  dataProcessing {
+    1001 = B13\Container\DataProcessing\ContainerProcessor
+    1001 {
+      colPos = 1001
+      as = children
+    }
+  }
+}
