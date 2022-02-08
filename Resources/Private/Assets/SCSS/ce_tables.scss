@@ -1,0 +1,27 @@
+/* CE table */
+
+table.ce-table-alt {
+    border-collapse: separate;
+}
+
+table.ce-table-alt tbody tr td {
+    border: solid 1px rgba(210, 215, 217, 0.75);
+    border-left-width: 0;
+    border-top-width: 0;
+}
+
+table.ce-table-alt tbody tr td:first-child {
+    border-left-width: 1px;
+}
+
+table.ce-table-alt tbody tr:first-child td {
+    border-top-width: 1px;
+}
+
+table.ce-table-alt thead {
+    border-bottom: 0;
+}
+
+table.ce-table-alt tfoot {
+    border-top: 0;
+}

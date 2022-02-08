@@ -1,0 +1,21 @@
+/* Sprachmenü */
+
+ul.languageMenu {
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+ul.languageMenu li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 .5rem 0 0;
+}
+
+ul.languageMenu li:last-child {
+    margin: 0;
+}
+
+ul.languageMenu span.notranslation {
+    opacity: .5;
+}

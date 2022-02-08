@@ -1,0 +1,84 @@
+/* indexed_search */
+
+#search input[type="search"] {
+    max-width: inherit;
+}
+
+.tx-indexedsearch-info-sword {
+    margin-top: 1rem;
+}
+
+.tx-indexedsearch-info-sword .searchword {
+    font-weight: bold;
+}
+
+.tx-indexedsearch-res:after {
+    display: block;
+    content: "";
+    width: 90%;
+    border-bottom: 1px solid #ddd;
+    margin: 0 auto 2rem auto;
+}
+
+
+/* tx-indexedsearch-browsebox */
+
+ul.tx-indexedsearch-browsebox {
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+}
+
+ul.tx-indexedsearch-browsebox li {
+    display: inline-block;
+    padding-left: 0;
+    vertical-align: middle;
+}
+
+ul.tx-indexedsearch-browsebox li a {
+    -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    border-bottom: 0;
+    border-radius: 0.375em;
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: 600;
+    height: 2em;
+    line-height: 2em;
+    margin: 0 0.125em;
+    min-width: 2em;
+    padding: 0 0.5em;
+    text-align: center;
+}
+
+ul.tx-indexedsearch-browsebox li.tx-indexedsearch-browselist-currentPage a {
+    background-color: #f56a6a;
+    color: #ffffff !important;
+}
+
+ul.tx-indexedsearch-browsebox li.tx-indexedsearch-browselist-currentPage a:hover {
+    background-color: #f67878;
+}
+
+ul.tx-indexedsearch-browsebox li.tx-indexedsearch-browselist-currentPage a:active {
+    background-color: #f45c5c;
+}
+
+ul.tx-indexedsearch-browsebox li:first-child {
+    padding-right: 0.75em;
+}
+
+ul.tx-indexedsearch-browsebox li:last-child {
+    padding-left: 0.75em;
+}
+
+@media screen and (max-width: 480px) {
+    ul.tx-indexedsearch-browsebox li:nth-child(n+2):nth-last-child(n+2) {
+        display: none;
+    }
+    ul.tx-indexedsearch-browsebox li:first-child {
+        padding-right: 0;
+    }
+}

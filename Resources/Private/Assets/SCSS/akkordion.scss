@@ -1,0 +1,23 @@
+/* Akkordeon ohne JS mit EXT:container */
+
+.accordion details {
+    border: 1px solid #ccc;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    margin-bottom: .2rem;
+    cursor: pointer;
+}
+
+.accordion summary {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.accordion_content {
+    cursor: default;
+    margin-top: 1rem;
+}
+
+.accordion details p:last-child {
+    margin-bottom: 0;
+}
