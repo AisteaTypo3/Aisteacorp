@@ -1,0 +1,20 @@
+lib.MAINMENU = HMENU
+lib.MAINMENU {
+    entryLevel = 0
+    1 = TMENU
+    1 {
+        expAll = 1
+        wrap = <ul class="cf">|</ul>
+
+        noBlur = 1
+        NO = 1
+        NO {
+            ATagTitle.field = title
+            wrapItemAndSub = <li>|</li>  
+        }
+        ACT < .NO
+        ACT {
+            wrapItemAndSub = <li class="active">|</li>
+        }
+    }
+}

@@ -3,11 +3,9 @@
     <f:render partial="Logo" arguments="{_all}" />
     <f:render partial="LanguageMenu" arguments="{_all}" />
     <f:render partial="SocialMedia" />
-    <f:render partial="MainMenu" arguments="{_all}" />
-    <f:if condition="{data.uid} != {settings.searchTargetPid}">
-        <f:cObject typoscriptObjectPath="lib.searchField" />
-    </f:if>
+
     <form method="post" action="#">
         <input type="text" name="query" id="query" placeholder="Search" />
     </form>
+    <f:cObject typoscriptObjectPath="lib.MAINMENU" />
 </div>
