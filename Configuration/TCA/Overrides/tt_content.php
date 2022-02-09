@@ -85,3 +85,36 @@ $GLOBALS['TCA']['tt_content']['types']['3cols']['showitem'] = 'sys_language_uid,
 );
 // override default settings
 $GLOBALS['TCA']['tt_content']['types']['accordion']['showitem'] = 'sys_language_uid,CType,header,header_layout,layout,colPos,tx_container_parent';
+
+call_user_func(static function () {
+
+    $additionalColumns = [
+        'tx_aisteacontent_customcssclass' => [
+            'label' => 'custom css class',
+            'description' => 'custom CSS classes (separated by space no leading dot)',
+            'exclude' => 1,
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim',
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true
+                ],
+                'valuePicker' => [
+                    'items' => [
+                        ['Predefined Class', 'custom-class'],
+                    ],
+                ],
+            ]
+        ],
+    ];
+
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
+        'tt_content',
+        $additionalColumns
+    );
+
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+        'tt_content',
+        '--div--;Extended,tx_aisteacontent_customcssclass'
+    );
+});
