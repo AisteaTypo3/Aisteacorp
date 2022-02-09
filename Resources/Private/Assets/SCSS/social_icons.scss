@@ -1,0 +1,27 @@
+.icon-instagram {
+    position: relative;
+
+    &:before {
+        content: '';
+        background-image: url($uploadPath + 'social-icons/instagram.svg');
+
+        position: absolute;
+        left: 0;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.icon-github {
+    position: relative;
+
+    &:before {
+        content: '';
+        background-image: url($uploadPath + 'social-icons/github.svg');
+
+        position: absolute;
+        left: 0;
+        width: 30px;
+        height: 30px;
+    }
+}
