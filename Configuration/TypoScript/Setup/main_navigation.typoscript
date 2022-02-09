@@ -4,7 +4,7 @@ lib.MAINMENU {
     1 = TMENU
     1 {
         expAll = 1
-        wrap = <ul class="cf">|</ul>
+        wrap = <nav><ul class="main-navigation">|</ul></nav>
 
         noBlur = 1
         NO = 1

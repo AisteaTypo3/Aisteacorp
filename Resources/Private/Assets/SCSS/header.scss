@@ -1,0 +1,43 @@
+#header {
+
+    .frame-type-image {
+        position: relative;
+
+        header {
+            max-width: 1320px;
+            width: 100%;
+            margin: 0 auto;
+
+            h1 {
+                position: absolute;
+                bottom: 2rem;
+                z-index: 1; 
+            }
+        }
+
+    }
+
+}
+
+#navigation {
+    padding: 1rem 0;
+
+    .main-menu {
+        display: flex;
+        justify-content: end;
+    
+        nav {
+            text-align: right;
+            .main-navigation {
+                list-style: none;
+                display: inline-block;
+        
+                li {
+                    float: left;
+                    padding: 0.5rem 1rem;
+                
+                }
+            }
+        }
+    }
+}

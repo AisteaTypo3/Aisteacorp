@@ -1,27 +1,46 @@
-.icon-instagram {
+ul.icons {
+    list-style: none;
+    display: inline-block;
+    padding-left: 0;
+
+    li {
+        float: left;
+        margin-right: 1rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+
+@mixin social-icon {
     position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
 
     &:before {
         content: '';
-        background-image: url($uploadPath + 'social-icons/instagram.svg');
-
         position: absolute;
-        left: 0;
+        
         width: 30px;
         height: 30px;
     }
 }
 
-.icon-github {
-    position: relative;
+.icon-instagram {
+    @include social-icon;
 
     &:before {
-        content: '';
-        background-image: url($uploadPath + 'social-icons/github.svg');
+        background-image: url($uploadPath + 'social-icons/instagram.svg');
+    }
+}
 
-        position: absolute;
-        left: 0;
-        width: 30px;
-        height: 30px;
+.icon-github {
+    @include social-icon;
+
+    &:before {
+        background-image: url($uploadPath + 'social-icons/github.svg');
     }
 }

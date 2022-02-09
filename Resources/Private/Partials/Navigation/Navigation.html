@@ -1,11 +1,20 @@
 <!-- Header -->
 <div id="navigation">
-    <f:render partial="Logo" arguments="{_all}" />
-    <f:render partial="LanguageMenu" arguments="{_all}" />
-    <f:render partial="SocialMedia" />
-
+    <div class="container">
+        <div class="row">
+            <div class="col-3 col-6-small">
+                <f:render partial="Logo" arguments="{_all}" />
+            </div>
+            <div class="col-9 col-6-small main-menu">
+                    <!--<f:render partial="LanguageMenu" arguments="{_all}" />-->
+                    <f:cObject typoscriptObjectPath="lib.MAINMENU" />
+                    <f:render partial="SocialMedia" />
+            </div>
+        </div>
+    </div>
+    <!--      
     <form method="post" action="#">
         <input type="text" name="query" id="query" placeholder="Search" />
     </form>
-    <f:cObject typoscriptObjectPath="lib.MAINMENU" />
+    -->
 </div>
