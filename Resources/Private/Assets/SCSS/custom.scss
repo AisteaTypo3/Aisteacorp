@@ -1,6 +1,10 @@
 @import 'variables';
 @import 'mixins';
 @import 'header';
+@import 'footer';
+
+@import 'font';
+
 @import 'indexed_search';
 @import 'language_menu';
 @import 'meta_menu';
@@ -10,5 +14,13 @@
 @import 'social_icons';
 
 body {
-    
+    background-color: $primary;
+    color: $fontcolor;
+
+    @include fontRegular;
+
+    a {
+        text-decoration: none;
+        color: $fontcolor;
+    }
 }

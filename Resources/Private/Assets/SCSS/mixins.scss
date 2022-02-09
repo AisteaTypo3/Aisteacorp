@@ -15,3 +15,21 @@
   @include theme($theme: DarkGreen);
 }
 */
+
+@mixin fontRegular {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin fontBold {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+@mixin fontBolder {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
