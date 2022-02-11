@@ -2,26 +2,24 @@
 <f:layout name="Default" />
 <f:section name="Main">
     {f:variable(name: 'css', value: ' {data.tx_aisteacontent_customcssclass}') -> f:if(condition: data.tx_aisteacontent_customcssclass)}
-    <section class="section-container {css}">
-        <div class="container">
-            <div class="row">
-                <f:if condition="{childrenLeft}">
-                    <div class="col-6 col-12-small">
-                        <f:for each="{childrenLeft}" as="child">
-                            <f:format.raw>{child.renderedContent}</f:format.raw>
-                        </f:for>
-                    </div>
-                </f:if>
-                <f:if condition="{childrenRight}">
-                    <div class="col-6 col-12-small">
-                        <f:for each="{childrenRight}" as="child">
-                            <f:format.raw>{child.renderedContent}</f:format.raw>
-                        </f:for>
-                    </div>
-                </f:if>
-            </div>
+    <div class="container {css}">
+        <div class="row">
+            <f:if condition="{childrenLeft}">
+                <div class="col-6 col-12-small col--1">
+                    <f:for each="{childrenLeft}" as="child">
+                        <f:format.raw>{child.renderedContent}</f:format.raw>
+                    </f:for>
+                </div>
+            </f:if>
+            <f:if condition="{childrenRight}">
+                <div class="col-6 col-12-small col--2">
+                    <f:for each="{childrenRight}" as="child">
+                        <f:format.raw>{child.renderedContent}</f:format.raw>
+                    </f:for>
+                </div>
+            </f:if>
         </div>
-    </section>
+    </div>
 </f:section>
 
 </html>

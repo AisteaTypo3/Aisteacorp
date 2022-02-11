@@ -1,3 +1,17 @@
+tt_content.section < lib.contentElement
+tt_content.section {
+  templateName = section
+  templateRootPaths.10 = EXT:aisteacorp/Resources/Private/Extensions/container/Templates/
+  layoutRootPaths.10 = EXT:aisteacorp/Resources/Private/Extensions/fluid_styled_content/Layouts/
+  dataProcessing {
+    81 = B13\Container\DataProcessing\ContainerProcessor
+    81 {
+      colPos = 81
+      as = children
+    }
+  }
+}
+
 tt_content.1col < lib.contentElement
 tt_content.1col {
   templateName = 1col

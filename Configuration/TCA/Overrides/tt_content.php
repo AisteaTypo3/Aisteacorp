@@ -6,12 +6,33 @@ if (!defined('TYPO3_MODE')) {
 \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
     (
     new \B13\Container\Tca\ContainerConfiguration(
-        '1col', // CType
+        'section', // CType
         'Section Container', // label
+        'section tag added', // description
+        [
+            [
+                ['name' => 'Section Container', 'colPos' => 81]
+            ]
+        ] 
+    )
+    )
+        // override default configurations
+        ->setIcon('EXT:container/Resources/Public/Icons/container-1col.svg')
+        ->setSaveAndCloseInNewContentElementWizard(true)
+);
+// override default settings
+$GLOBALS['TCA']['tt_content']['types']['section']['showitem'] = 'sys_language_uid,CType,header,header_layout,layout,colPos,tx_container_parent';
+
+
+\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+    (
+    new \B13\Container\Tca\ContainerConfiguration(
+        '1col', // CType
+        '1 Spalte', // label
         '100%', // description
         [
             [
-                ['name' => 'Section Container', 'colPos' => 101]
+                ['name' => '1 Spalte', 'colPos' => 101]
             ]
         ] 
     )
@@ -101,7 +122,10 @@ call_user_func(static function () {
                 ],
                 'valuePicker' => [
                     'items' => [
-                        ['Predefined Class', 'custom-class'],
+                        ['Headline Section', 'headline'],
+                        ['About Section', 'about'],
+                        ['Gallery Section', 'gallery'],
+                        ['Skill Section', 'skill'],
                     ],
                 ],
             ]

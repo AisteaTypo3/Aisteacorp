@@ -2,17 +2,15 @@
 <f:layout name="Default" />
 <f:section name="Main">
     {f:variable(name: 'css', value: ' {data.tx_aisteacontent_customcssclass}') -> f:if(condition: data.tx_aisteacontent_customcssclass)}
-    <section class="section-container {css}">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-12-small">
-                    <f:for each="{children}" as="child">
-                        <f:format.raw>{child.renderedContent}</f:format.raw>
-                    </f:for>
-                </div>
+    <div class="container {css}-container">
+        <div class="row">
+            <div class="col-12 col-12-small">
+                <f:for each="{children}" as="child">
+                    <f:format.raw>{child.renderedContent}</f:format.raw>
+                </f:for>
             </div>
         </div>
-    </section>
+    </div>
 </f:section>
 
 </html>
