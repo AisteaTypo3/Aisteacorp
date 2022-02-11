@@ -17,8 +17,15 @@ page {
         browser = EXT:aisteacorp/Resources/Public/JavaScript/browser.min.js
         breakpoints = EXT:aisteacorp/Resources/Public/JavaScript/breakpoints.min.js
         util = EXT:aisteacorp/Resources/Public/JavaScript/util.js
-        main = EXT:aisteacorp/Resources/Public/JavaScript/main.js
         fslightbox = EXT:aisteacorp/Resources/Public/JavaScript/fslightbox.js
+
+        gsap-min = EXT:aisteacorp/Resources/Public/JavaScript/gsap/gsap.min.js
+        gsap-scrolltrigger = EXT:aisteacorp/Resources/Public/JavaScript/gsap/ScrollTrigger.min.js
+
+        gsap-custom = EXT:aisteacorp/Resources/Public/JavaScript/custom-gsap.js
+        main = EXT:aisteacorp/Resources/Public/JavaScript/main.js
+
+
     }
 
     bodyTagAdd = class="is-preload"
@@ -59,8 +66,6 @@ page.10 {
         rootPageId = {$aisteacorp.rootPageId}
         logoText = {$aisteacorp.logoText}
         logoFile = {$aisteacorp.logoFile}
-        socialmedia.twitter = {$aisteacorp.socialmedia.twitter}
-        socialmedia.facebook = {$aisteacorp.socialmedia.facebook}
         socialmedia.instagram = {$aisteacorp.socialmedia.instagram}
         socialmedia.github = {$aisteacorp.socialmedia.github}
         searchTargetPid = {$aisteacorp.searchTargetPid}
